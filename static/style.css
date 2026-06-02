@@ -1,0 +1,114 @@
+/* ===== Aセクション：全体設定 ===== */
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #070b1c;
+    overflow: hidden;
+    font-family: "Meiryo", sans-serif;
+}
+
+/* ===== Bセクション：ゲーム画面 ===== */
+#game-wrap {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+#gameCanvas {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    image-rendering: pixelated;
+}
+
+/* ===== Cセクション：チャットログ ===== */
+#chat-panel {
+    position: absolute;
+    left: 18px;
+    bottom: 22px;
+    width: 285px;
+    height: 230px;
+    padding: 12px;
+    box-sizing: border-box;
+    background: rgba(12, 20, 34, 0.72);
+    border: 1px solid rgba(180, 220, 255, 0.45);
+    border-radius: 10px;
+    color: white;
+    backdrop-filter: blur(4px);
+}
+
+#chat-title {
+    font-weight: bold;
+    color: #8fe6ff;
+    margin-bottom: 8px;
+}
+
+#chat-log {
+    height: 150px;
+    overflow-y: auto;
+    font-size: 14px;
+    line-height: 1.55;
+}
+
+.chat-line {
+    margin-bottom: 2px;
+}
+
+#chat-input-row {
+    display: flex;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+#chat-input {
+    flex: 1;
+    min-width: 0;
+    padding: 7px 8px;
+    color: white;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(180, 220, 255, 0.3);
+    border-radius: 8px;
+    outline: none;
+}
+
+#send-button {
+    width: 38px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(130, 210, 255, 0.85);
+    color: #07111f;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ===== Dセクション：操作説明 ===== */
+#help-panel {
+    position: absolute;
+    left: 18px;
+    top: 22px;
+    padding: 12px 15px;
+    color: white;
+    font-size: 14px;
+    line-height: 1.8;
+    background: rgba(12, 20, 34, 0.62);
+    border: 1px solid rgba(180, 220, 255, 0.35);
+    border-radius: 10px;
+}
+
+.help-title {
+    color: #8fe6ff;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+#help-panel span {
+    display: inline-block;
+    min-width: 54px;
+    padding: 1px 5px;
+    margin-right: 4px;
+    text-align: center;
+    color: #07111f;
+    background: rgba(220, 240, 255, 0.85);
+    border-radius: 5px;
+    font-weight: bold;
+}

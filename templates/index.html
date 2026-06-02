@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- ===== Aセクション：基本設定 ===== -->
+    <meta charset="UTF-8">
+    <title>Beach Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <!-- ===== Bセクション：ゲーム画面 ===== -->
+    <div id="game-wrap">
+        <canvas id="gameCanvas" width="1280" height="720"></canvas>
+
+        <!-- ===== Cセクション：チャットログ ===== -->
+        <div id="chat-panel">
+            <div id="chat-title">チャット</div>
+            <div id="chat-log"></div>
+            <div id="chat-input-row">
+                <input id="chat-input" type="text" placeholder="メッセージを入力..." maxlength="40">
+                <button id="send-button">▶</button>
+            </div>
+        </div>
+
+        <!-- ===== Dセクション：操作説明 ===== -->
+        <div id="help-panel">
+            <div class="help-title">操作方法</div>
+            <div><span>クリック</span>：移動</div>
+            <div><span>WASD</span>：移動</div>
+            <div><span>Space</span>：釣り・焼く・食べる</div>
+            <div><span>Enter</span>：チャット送信</div>
+        </div>
+    </div>
+
+    <!-- ===== Eセクション：Socket.IO読み込み ===== -->
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+
+    <!-- ===== Fセクション：ゲーム処理読み込み ===== -->
+    <script src="{{ url_for('static', filename='game.js') }}"></script>
+</body>
+</html>
